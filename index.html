@@ -155,9 +155,6 @@ a{color:#0f4d33}a:hover{color:#186e49}
 </div>
 </sc-if>
 </div>
-<sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
-<div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">Home = statische voorpagina, opgebouwd uit herbruikbare secties (hero, diensten, werkwijze, projecten, USP, CTA) zodat ze op andere pagina's opnieuw te plaatsen zijn.</div><div class="wpl">Diensten-kaarten en uitgelichte projecten trekken automatisch uit de CPT's — niet handmatig dubbel invoeren. Logo's opdrachtgevers als aparte kleine CPT of ACF-repeater.</div><div class="wpl">Offerteformulier één keer bouwen (formulierplugin) en als blok/shortcode hergebruiken in de strook, op dienst-detail en op contact.</div></div>
-</sc-if>
 <sc-if value="{{ showActies }}" hint-placeholder-val="{{ true }}">
 <div class="kln" style="width:1112px"><div class="klt">Aanleveren door de klant</div><div class="kll">☐ Akkoord op deze indeling: kloppen de secties en de volgorde?</div><div class="kll">☐ Eén sterke hero-foto (liggend, gevel in uitvoering) en 5 logo's van opdrachtgevers.</div><div class="kll">☐ Kernzin over het bedrijf (max 2 regels) en per dienst een omschrijving van ± 40 woorden.</div><div class="kll">☐ Juiste cijfers voor de balk: jaren ervaring, aantal projecten, aantal vakmensen.</div></div>
 </sc-if>
@@ -195,9 +192,6 @@ a{color:#0f4d33}a:hover{color:#186e49}
 </div>
 </sc-if>
 </div>
-<sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
-<div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">Deze pagina is het archief van de CPT "dienst" — de zes kaarten komen automatisch mee, dus een zevende dienst toevoegen betekent één bericht aanmaken, niet de pagina verbouwen.</div><div class="wpl">De submenu-items uit het menu (Gevelrenovatie … Complete woningrenovatie) verwijzen naar dezelfde items; menu één keer instellen met "Diensten" als parent.</div><div class="wpl">FAQ als eigen CPT of ACF-repeater, zodat dezelfde vragen ook op dienst-detail te tonen zijn (en meteen goed voor Google-rich results).</div></div>
-</sc-if>
 <sc-if value="{{ showActies }}" hint-placeholder-val="{{ true }}">
 <div class="kln" style="width:1112px"><div class="klt">Aanleveren door de klant</div><div class="kll">☐ Bevestig de zes diensten uit het menu — of geef door wat eraf of bij moet.</div><div class="kll">☐ Eén foto per dienst.</div><div class="kll">☐ 5 tot 8 veelgestelde vragen met antwoord.</div><div class="kll">☐ Klopt "één aanspreekpunt, één planning, één garantie" als belofte?</div></div>
 </sc-if>
@@ -240,9 +234,6 @@ a{color:#0f4d33}a:hover{color:#186e49}
 </div>
 </sc-if>
 </div>
-<sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
-<div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">Eén single-template voor de CPT "dienst". Velden: intro, opsomming inbegrepen (repeater), voor/na-beeldpaar, stappen (repeater), FAQ-selectie, doelgroep-taxonomie.</div><div class="wpl">"Projecten met deze dienst" is een automatische query op de gedeelde taxonomie dienst — projecten koppelen gaat dan met één vinkje.</div><div class="wpl">Het formulier vult het veld "dienst" vooraf met de paginanaam, zodat aanvragen meteen gesorteerd binnenkomen.</div></div>
-</sc-if>
 <sc-if value="{{ showActies }}" hint-placeholder-val="{{ true }}">
 <div class="kln" style="width:1112px"><div class="klt">Aanleveren door de klant</div><div class="kll">☐ Per dienst: wat er inbegrepen is (6 punten) en de aanpak in 4 stappen.</div><div class="kll">☐ Per dienst een voor- en na-foto van hetzelfde project.</div><div class="kll">☐ Per dienst 2 of 3 vragen die klanten echt stellen.</div><div class="kll">☐ Naar wie mogen offerte-aanvragen per dienst toe?</div></div>
 </sc-if>
@@ -280,9 +271,6 @@ a{color:#0f4d33}a:hover{color:#186e49}
 </div>
 </sc-if>
 </div>
-<sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
-<div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">CPT "project" met twee taxonomieën: dienst (gedeeld met de dienstenpagina's) en type opdrachtgever. Plaats en jaar als ACF-velden.</div><div class="wpl">Filters het beste als AJAX-filter (bijv. via de themabuilder of een filterplugin) — met 12 projecten is herladen van de pagina ook acceptabel, dan geen extra plugin nodig.</div></div>
-</sc-if>
 <sc-if value="{{ showActies }}" hint-placeholder-val="{{ true }}">
 <div class="kln" style="width:1112px"><div class="klt">Aanleveren door de klant</div><div class="kll">☐ Lijst van 6 tot 15 projecten met dienst, type opdrachtgever, plaats en jaar.</div><div class="kll">☐ Toestemming om de naam van de opdrachtgever te noemen — of een omschrijving zonder naam.</div><div class="kll">☐ Bepaal welke drie projecten uitgelicht worden op de home.</div></div>
 </sc-if>
@@ -315,9 +303,6 @@ a{color:#0f4d33}a:hover{color:#186e49}
 </div>
 </sc-if>
 </div>
-<sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
-<div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">Single-template voor de CPT "project". Velden: opdrachtgever, locatie, jaar, doorlooptijd, voor/na-paar, galerij, quote (optioneel, blok verdwijnt als het leeg is).</div><div class="wpl">Vraag de klant per project 6-10 bruikbare foto's aan te leveren, plus altijd één voor-foto. Zonder voor-foto's valt de sterkste sectie van deze pagina weg.</div></div>
-</sc-if>
 <sc-if value="{{ showActies }}" hint-placeholder-val="{{ true }}">
 <div class="kln" style="width:1112px"><div class="klt">Aanleveren door de klant</div><div class="kll">☐ Per project 6 tot 10 bruikbare foto's, met altijd minstens één voor-foto.</div><div class="kll">☐ Per project een korte omschrijving: opgave, aanpak, resultaat (± 150 woorden).</div><div class="kll">☐ Optioneel: een quote van de opdrachtgever met naam en functie.</div><div class="kll">☐ Doorlooptijd en jaar per project.</div></div>
 </sc-if>
@@ -348,9 +333,6 @@ a{color:#0f4d33}a:hover{color:#186e49}
 </div>
 </sc-if>
 </div>
-<sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
-<div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">Team als CPT of ACF-repeater; keurmerken en opdrachtgever-logo's als losse mediavelden zodat de klant ze zelf kan bijwerken.</div><div class="wpl">"Werken bij ons?" is nu alleen een knop naar contact — als er vacatures komen, wordt dit later een eigen pagina.</div></div>
-</sc-if>
 <sc-if value="{{ showActies }}" hint-placeholder-val="{{ true }}">
 <div class="kln" style="width:1112px"><div class="klt">Aanleveren door de klant</div><div class="kll">☐ Bedrijfsverhaal van 200 tot 300 woorden.</div><div class="kll">☐ Portretfoto's van het team met naam en functie.</div><div class="kll">☐ Certificaten (VCA, Bouwgarant) als PDF en de bijbehorende logo's.</div><div class="kll">☐ Logo's van opdrachtgevers die getoond mogen worden.</div></div>
 </sc-if>
