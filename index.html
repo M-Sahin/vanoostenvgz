@@ -49,15 +49,18 @@ a{color:#0f4d33}a:hover{color:#186e49}
 .wpn{border:1px dashed rgba(15,77,51,.4);border-radius:6px;background:rgba(15,77,51,.04);padding:10px 12px;max-width:100%;display:flex;flex-direction:column;gap:4px}
 .wpt{font:700 8.5px Roboto,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#0f4d33}
 .wpl{font:400 10.5px/1.55 Roboto,sans-serif;color:rgba(0,0,0,.62)}
+.kln{border:1px dashed rgba(150,95,20,.55);border-radius:6px;background:rgba(190,130,40,.07);padding:10px 12px;display:flex;flex-direction:column;gap:4px;box-sizing:border-box}
+.klt{font:700 8.5px Roboto,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#8a5a12}
+.kll{font:400 10.5px/1.55 Roboto,sans-serif;color:rgba(0,0,0,.66)}
 </style></helmet>
 
 <section class="dv-turn" id="t1">
 <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Van Oosten Vgz — wireframes, ronde 1</span></div>
-<p class="dv-tsub">Drie richtingen voor de home (<a class="dv-oid" href="#1a">1a</a> <a class="dv-oid" href="#1b">1b</a> <a class="dv-oid" href="#1c">1c</a>) en één uitwerking per overige pagina. Elke kaart toont desktop + mobiel. Groene randjes = WordPress-notities: welk contenttype of veld erachter hoort.</p>
+<p class="dv-tsub">Eén wireframe per pagina: home, diensten, dienst-detail, projecten, project-detail, over ons en contact. Elke kaart toont desktop + mobiel. Groene randjes = WordPress-notities, oranje randjes = wat wij van u nodig hebben om de pagina te kunnen vullen.</p>
 <div class="dv-opts">
 
 <div class="dv-opt" id="1a">
-<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Home — variant A · offerte-gericht, dichtbij de referentie</div>
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Home — offerte-gericht</div>
 <div class="dv-card" style="width:1112px;padding:16px;display:flex;gap:18px;align-items:flex-start">
 <div class="wf" style="width:740px">
   <div class="sec" style="gap:6px;background:#f6f5f2;padding:7px 15px"><div class="row" style="justify-content:space-between"><div class="ts">☎ 020 123 4567 · info@vanoostenvgz.nl</div><div class="ts">VCA gecertificeerd · Bouwgarant</div></div></div>
@@ -155,103 +158,13 @@ a{color:#0f4d33}a:hover{color:#186e49}
 <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
 <div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">Home = statische voorpagina, opgebouwd uit herbruikbare secties (hero, diensten, werkwijze, projecten, USP, CTA) zodat ze op andere pagina's opnieuw te plaatsen zijn.</div><div class="wpl">Diensten-kaarten en uitgelichte projecten trekken automatisch uit de CPT's — niet handmatig dubbel invoeren. Logo's opdrachtgevers als aparte kleine CPT of ACF-repeater.</div><div class="wpl">Offerteformulier één keer bouwen (formulierplugin) en als blok/shortcode hergebruiken in de strook, op dienst-detail en op contact.</div></div>
 </sc-if>
+<sc-if value="{{ showActies }}" hint-placeholder-val="{{ true }}">
+<div class="kln" style="width:1112px"><div class="klt">Aanleveren door de klant</div><div class="kll">☐ Akkoord op deze indeling: kloppen de secties en de volgorde?</div><div class="kll">☐ Eén sterke hero-foto (liggend, gevel in uitvoering) en 5 logo's van opdrachtgevers.</div><div class="kll">☐ Kernzin over het bedrijf (max 2 regels) en per dienst een omschrijving van ± 40 woorden.</div><div class="kll">☐ Juiste cijfers voor de balk: jaren ervaring, aantal projecten, aantal vakmensen.</div></div>
+</sc-if>
 </div>
 
 <div class="dv-opt" id="1b">
-<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Home — variant B · doelgroep kiest eerst</div>
-<div class="dv-card" style="width:1112px;padding:16px;display:flex;gap:18px;align-items:flex-start">
-<div class="wf" style="width:740px">
-  <div class="sec" style="padding-top:10px;padding-bottom:10px"><div class="row" style="justify-content:space-between"><div class="row"><div class="img" style="width:44px;height:30px">logo</div><div class="t">Van Oosten Vgz</div></div><div class="row" style="gap:14px"><div class="t">Diensten ▾</div><div class="t">Projecten</div><div class="t">Over ons</div><div class="t">Contact</div><div class="btnf">☎ 020 123 4567</div></div></div></div>
-  <div class="sec" style="padding:0;border-bottom:none">
-    <div class="img" style="height:250px;border:none;border-radius:0;position:relative;display:block">
-      <div style="position:absolute;left:22px;top:26px;width:58%;display:flex;flex-direction:column;gap:8px">
-        <div class="lbl">Hero met foto-achtergrond</div>
-        <div class="h1"></div><div class="h1" style="width:78%"></div>
-        <div class="b" style="width:90%"></div><div class="b" style="width:70%"></div>
-        <div class="row" style="margin-top:4px"><div class="btnf">Vraag offerte aan →</div><div class="btn" style="background:#fff">☎ Bel direct</div></div>
-      </div>
-      <div style="position:absolute;left:22px;right:22px;bottom:-34px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px">
-        <div class="box" style="gap:5px;border-color:#0f4d33;box-shadow:0 2px 6px rgba(0,0,0,.1)"><div class="t">Ik ben een woningcorporatie</div><div class="b"></div><div class="ts">→ planmatig onderhoud &amp; offerte</div></div>
-        <div class="box" style="gap:5px;box-shadow:0 2px 6px rgba(0,0,0,.1)"><div class="t">Ik ben VvE of vastgoedbelegger</div><div class="b"></div><div class="ts">→ MJOP, renovatie &amp; offerte</div></div>
-      </div>
-    </div>
-  </div>
-  <div class="sec" style="padding:48px 15px 16px"><div class="lbl">Drie keuzeblokken hangen over de hero</div><div class="ts">Elk blok leidt naar een doelgroeppagina of gefilterd dienstenoverzicht.</div></div>
-  <div class="sec" style="padding:18px 15px">
-    <div class="lbl">Diensten — afwisselend links/rechts, met foto</div>
-    <div class="row" style="gap:14px;align-items:center"><div class="img" style="width:44%;height:120px">foto: gevel</div><div class="col" style="flex:1"><div class="ts">01 / Gevelrenovatie</div><div class="h2" style="width:70%"></div><div class="b"></div><div class="b" style="width:80%"></div><div class="btn" style="align-self:flex-start">Lees meer →</div></div></div>
-    <div class="row" style="gap:14px;align-items:center"><div class="col" style="flex:1"><div class="ts">02 / Balkonrenovatie</div><div class="h2" style="width:70%"></div><div class="b"></div><div class="b" style="width:80%"></div><div class="btn" style="align-self:flex-start">Lees meer →</div></div><div class="img" style="width:44%;height:120px">foto: balkon</div></div>
-    <div class="row" style="gap:14px;align-items:center"><div class="img" style="width:44%;height:120px">foto: dak</div><div class="col" style="flex:1"><div class="ts">03 / Dakwerk</div><div class="h2" style="width:70%"></div><div class="b"></div><div class="b" style="width:80%"></div><div class="btn" style="align-self:flex-start">Lees meer →</div></div></div>
-    <div class="row" style="justify-content:center;margin-top:4px"><div class="btn">Alle 6 diensten →</div></div>
-  </div>
-  <div class="sec" style="padding:18px 15px;background:#f6f5f2"><div class="lbl">Cijfers + keurmerken op één rij</div><div class="row" style="justify-content:space-between"><div class="col" style="gap:2px"><div class="tb" style="color:#0f4d33">25+</div><div class="ts">jaar</div></div><div class="col" style="gap:2px"><div class="tb" style="color:#0f4d33">500+</div><div class="ts">projecten</div></div><div class="col" style="gap:2px"><div class="tb" style="color:#0f4d33">14</div><div class="ts">vakmensen</div></div><div class="img" style="width:50px;height:32px">VCA</div><div class="img" style="width:50px;height:32px">Bouw-<br>garant</div><div class="img" style="width:50px;height:32px">keur-<br>merk</div></div></div>
-  <div class="sec" style="padding:18px 15px"><div class="lbl">Projecten — brede slider</div><div class="row" style="gap:9px;align-items:stretch"><div class="col" style="gap:5px;flex:1.6"><div class="img" style="height:140px">groot projectbeeld</div><div class="t">Gevelrenovatie 48 woningen</div><div class="ts">Corporatie · Rotterdam · 2025</div></div><div class="col" style="flex:1;gap:9px"><div class="col" style="gap:4px"><div class="img" style="height:62px">projectfoto</div><div class="ts">Balkons VvE Parkzicht</div></div><div class="col" style="gap:4px"><div class="img" style="height:62px">projectfoto</div><div class="ts">Dakvervanging Zeist</div></div></div></div><div class="row" style="justify-content:space-between"><div class="ts">◦ ◦ ◦</div><div class="btn">Alle projecten →</div></div></div>
-  <div class="sec" style="padding:18px 15px;background:#f6f5f2"><div class="lbl">Klant aan het woord + team</div><div class="row" style="gap:14px;align-items:flex-start"><div class="box" style="flex:1.3;gap:7px"><div class="tb">"</div><div class="b"></div><div class="b"></div><div class="b" style="width:60%"></div><div class="row"><div class="img" style="width:26px;height:26px;border-radius:50%">◦</div><div class="ts">naam · woningcorporatie</div></div></div><div class="col" style="flex:1"><div class="img" style="height:100px">teamfoto (breed)</div><div class="btn" style="align-self:flex-start">Over ons team →</div></div></div></div>
-  <div class="sec" style="padding:18px 15px;background:#0f4d33"><div class="row" style="justify-content:space-between;align-items:center"><div class="col"><div class="h2" style="width:220px;background:#fff"></div><div class="b" style="width:180px;background:rgba(255,255,255,.55)"></div></div><div class="row"><div class="btn" style="border-color:#fff;color:#fff">☎ Bel direct</div><div class="btn" style="background:#fff;border-color:#fff">Vraag offerte aan →</div></div></div></div>
-  <div class="sec" style="border-bottom:none;background:#1c1c1a;padding:16px 15px"><div class="lbl" style="color:#8fb3a2">Footer</div><div class="row" style="align-items:flex-start;gap:16px"><div class="col" style="flex:1.2"><div class="img" style="width:44px;height:30px">logo</div><div class="b" style="background:rgba(255,255,255,.3)"></div></div><div class="col" style="flex:1"><div class="h2" style="width:50%;background:#fff"></div><div class="b" style="width:70%;background:rgba(255,255,255,.3)"></div><div class="b" style="width:60%;background:rgba(255,255,255,.3)"></div></div><div class="col" style="flex:1"><div class="h2" style="width:50%;background:#fff"></div><div class="b" style="width:70%;background:rgba(255,255,255,.3)"></div><div class="b" style="width:60%;background:rgba(255,255,255,.3)"></div></div><div class="col" style="flex:1"><div class="h2" style="width:50%;background:#fff"></div><div class="b" style="width:70%;background:rgba(255,255,255,.3)"></div></div></div></div>
-</div>
-<sc-if value="{{ showMobile }}" hint-placeholder-val="{{ true }}">
-<div class="wf" style="width:300px">
-  <div class="sec" style="padding:9px 12px"><div class="row" style="justify-content:space-between"><div class="img" style="width:38px;height:26px">logo</div><div class="btn" style="padding:3px 9px">☰</div></div></div>
-  <div class="sec" style="padding:0;border-bottom:none"><div class="img" style="height:150px;border:none;border-radius:0;display:block;position:relative"><div style="position:absolute;left:14px;top:20px;right:14px;display:flex;flex-direction:column;gap:6px"><div class="h1" style="width:85%"></div><div class="h1" style="width:55%"></div><div class="b" style="width:80%"></div></div></div></div>
-  <div class="sec" style="padding:14px 12px"><div class="lbl">Keuzeblokken onder elkaar</div><div class="box" style="border-color:#0f4d33;gap:4px"><div class="t">Ik ben een woningcorporatie →</div></div><div class="box" style="gap:4px"><div class="t">Ik ben VvE of vastgoedbelegger →</div></div><div class="btnf" style="justify-content:center">Vraag offerte aan →</div></div>
-  <div class="sec" style="padding:14px 12px"><div class="lbl">Diensten — foto boven tekst</div><div class="col" style="gap:5px"><div class="img" style="height:80px">foto</div><div class="ts">01 / Gevelrenovatie</div><div class="h2" style="width:70%"></div><div class="b"></div><div class="btn" style="align-self:flex-start">Lees meer →</div></div><div class="col" style="gap:5px"><div class="img" style="height:80px">foto</div><div class="ts">02 / Balkonrenovatie</div><div class="h2" style="width:70%"></div><div class="b"></div></div><div class="btn" style="align-self:center">Alle 6 diensten →</div></div>
-  <div class="sec" style="padding:14px 12px;background:#f6f5f2"><div class="lbl">Rest gestapeld</div><div class="ts">cijfers 2×2 · projectenslider · quote · team · CTA · footer met accordeon-links</div></div>
-  <div class="sec" style="border-bottom:none;padding:9px 12px;background:#0f4d33"><div class="row" style="justify-content:center;gap:8px"><div class="btn" style="border-color:#fff;color:#fff">☎ Bellen</div><div class="btn" style="border-color:#fff;color:#fff">Offerte</div></div></div>
-</div>
-</sc-if>
-</div>
-<sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
-<div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">De twee keuzeblokken worden twee landingspagina's (woningcorporaties / VvE's &amp; vastgoedbeleggers) — apart in te vullen en los te vinden in Google.</div><div class="wpl">Diensten-rijen komen uit dezelfde CPT als in <a class="dv-oid" href="#1a">1a</a>, alleen een andere weergave: één sectieblok met een "afwisselend links/rechts" instelling.</div><div class="wpl">Hero met foto-achtergrond: geef de klant in de editor een veld voor beeld + donkere overlay, anders wordt witte tekst onleesbaar op een lichte foto.</div></div>
-</sc-if>
-</div>
-
-<div class="dv-opt" id="1c">
-<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Home — variant C · portfolio voorop, kort en visueel</div>
-<div class="dv-card" style="width:1112px;padding:16px;display:flex;gap:18px;align-items:flex-start">
-<div class="wf" style="width:740px">
-  <div class="sec" style="padding-top:10px;padding-bottom:10px;border-bottom-style:solid"><div class="row" style="justify-content:space-between"><div class="row"><div class="img" style="width:44px;height:30px">logo</div></div><div class="row" style="gap:14px"><div class="t">Werk</div><div class="t">Diensten ▾</div><div class="t">Over ons</div><div class="btnf">Offerte aanvragen</div></div></div></div>
-  <div class="sec" style="padding:34px 15px 30px;align-items:center;text-align:center">
-    <div class="lbl">Korte claim, één CTA</div>
-    <div class="h1" style="width:70%"></div><div class="h1" style="width:45%;background:#0f4d33"></div>
-    <div class="b" style="width:52%"></div>
-    <div class="row" style="margin-top:6px"><div class="btnf">Vraag offerte aan →</div><div class="btn">☎ 020 123 4567</div></div>
-  </div>
-  <div class="sec" style="padding:0;border-bottom:none"><div class="row" style="gap:0"><div class="img" style="flex:2;height:190px;border-radius:0">projectfoto (groot)</div><div class="col" style="flex:1;gap:0"><div class="img" style="height:95px;border-radius:0">projectfoto</div><div class="img" style="height:95px;border-radius:0">projectfoto</div></div><div class="col" style="flex:1;gap:0"><div class="img" style="height:95px;border-radius:0">projectfoto</div><div class="img" style="height:95px;border-radius:0">projectfoto</div></div></div></div>
-  <div class="sec" style="padding:14px 15px"><div class="row" style="justify-content:space-between"><div class="lbl">Mozaïek van recent werk — direct onder de hero</div><div class="btn">Alle projecten (12) →</div></div></div>
-  <div class="sec" style="padding:18px 15px">
-    <div class="lbl">Diensten als leesbare lijst</div>
-    <div class="col" style="gap:0">
-      <div class="row" style="justify-content:space-between;padding:9px 0;border-top:1.5px solid rgba(0,0,0,.15)"><div class="tb">Gevelrenovatie</div><div class="row" style="flex:1;justify-content:flex-end;gap:10px"><div class="b" style="width:200px"></div><div class="ts">→</div></div></div>
-      <div class="row" style="justify-content:space-between;padding:9px 0;border-top:1.5px solid rgba(0,0,0,.15)"><div class="tb">Balkonrenovatie</div><div class="row" style="flex:1;justify-content:flex-end;gap:10px"><div class="b" style="width:200px"></div><div class="ts">→</div></div></div>
-      <div class="row" style="justify-content:space-between;padding:9px 0;border-top:1.5px solid rgba(0,0,0,.15)"><div class="tb">Dakwerk</div><div class="row" style="flex:1;justify-content:flex-end;gap:10px"><div class="b" style="width:200px"></div><div class="ts">→</div></div></div>
-      <div class="row" style="justify-content:space-between;padding:9px 0;border-top:1.5px solid rgba(0,0,0,.15)"><div class="tb">Schilderwerk</div><div class="row" style="flex:1;justify-content:flex-end;gap:10px"><div class="b" style="width:200px"></div><div class="ts">→</div></div></div>
-      <div class="row" style="justify-content:space-between;padding:9px 0;border-top:1.5px solid rgba(0,0,0,.15)"><div class="tb">Verduurzaming</div><div class="row" style="flex:1;justify-content:flex-end;gap:10px"><div class="b" style="width:200px"></div><div class="ts">→</div></div></div>
-      <div class="row" style="justify-content:space-between;padding:9px 0;border-top:1.5px solid rgba(0,0,0,.15);border-bottom:1.5px solid rgba(0,0,0,.15)"><div class="tb">Complete woningrenovatie</div><div class="row" style="flex:1;justify-content:flex-end;gap:10px"><div class="b" style="width:200px"></div><div class="ts">→</div></div></div>
-    </div>
-  </div>
-  <div class="sec" style="padding:18px 15px;background:#f6f5f2"><div class="lbl">Over ons — kort, met één beeld</div><div class="row" style="gap:16px;align-items:center"><div class="img" style="width:40%;height:120px">foto: team op locatie</div><div class="col" style="flex:1"><div class="h2" style="width:60%"></div><div class="b"></div><div class="b"></div><div class="b" style="width:55%"></div><div class="row" style="gap:8px;margin-top:4px"><div class="img" style="width:44px;height:28px">VCA</div><div class="img" style="width:44px;height:28px">Bouw-<br>garant</div><div class="btn">Over ons →</div></div></div></div></div>
-  <div class="sec" style="padding:22px 15px;align-items:center;text-align:center"><div class="lbl">Afsluitende CTA</div><div class="h2" style="width:45%"></div><div class="b" style="width:55%"></div><div class="row"><div class="btnf">Vraag offerte aan →</div><div class="btn">☎ Bel direct</div></div></div>
-  <div class="sec" style="border-bottom:none;background:#1c1c1a;padding:16px 15px"><div class="row" style="justify-content:space-between;align-items:flex-start"><div class="col" style="flex:1"><div class="img" style="width:44px;height:30px">logo</div><div class="b" style="width:70%;background:rgba(255,255,255,.3)"></div></div><div class="row" style="flex:2;gap:16px"><div class="col" style="flex:1"><div class="h2" style="width:60%;background:#fff"></div><div class="b" style="background:rgba(255,255,255,.3)"></div><div class="b" style="width:70%;background:rgba(255,255,255,.3)"></div></div><div class="col" style="flex:1"><div class="h2" style="width:60%;background:#fff"></div><div class="b" style="background:rgba(255,255,255,.3)"></div><div class="b" style="width:70%;background:rgba(255,255,255,.3)"></div></div></div></div></div>
-</div>
-<sc-if value="{{ showMobile }}" hint-placeholder-val="{{ true }}">
-<div class="wf" style="width:300px">
-  <div class="sec" style="padding:9px 12px"><div class="row" style="justify-content:space-between"><div class="img" style="width:38px;height:26px">logo</div><div class="btn" style="padding:3px 9px">☰</div></div></div>
-  <div class="sec" style="padding:20px 12px;align-items:center;text-align:center"><div class="h1" style="width:90%"></div><div class="h1" style="width:60%;background:#0f4d33"></div><div class="b" style="width:80%"></div><div class="btnf" style="align-self:stretch;justify-content:center">Vraag offerte aan →</div><div class="ts">of bel 020 123 4567</div></div>
-  <div class="sec" style="padding:0;border-bottom:none"><div class="img" style="height:130px;border-radius:0">projectfoto (groot)</div><div class="row" style="gap:0"><div class="img" style="flex:1;height:70px;border-radius:0">foto</div><div class="img" style="flex:1;height:70px;border-radius:0">foto</div></div></div>
-  <div class="sec" style="padding:12px"><div class="btn" style="align-self:center">Alle projecten →</div></div>
-  <div class="sec" style="padding:14px 12px"><div class="lbl">Diensten als lijst</div><div class="col" style="gap:0"><div class="row" style="justify-content:space-between;padding:8px 0;border-top:1.5px solid rgba(0,0,0,.15)"><div class="t">Gevelrenovatie</div><div class="ts">→</div></div><div class="row" style="justify-content:space-between;padding:8px 0;border-top:1.5px solid rgba(0,0,0,.15)"><div class="t">Balkonrenovatie</div><div class="ts">→</div></div><div class="row" style="justify-content:space-between;padding:8px 0;border-top:1.5px solid rgba(0,0,0,.15)"><div class="t">Dakwerk</div><div class="ts">→</div></div><div class="row" style="justify-content:space-between;padding:8px 0;border-top:1.5px solid rgba(0,0,0,.15);border-bottom:1.5px solid rgba(0,0,0,.15)"><div class="ts">+ 3 meer</div><div class="ts">→</div></div></div></div>
-  <div class="sec" style="border-bottom:none;padding:9px 12px;background:#0f4d33"><div class="row" style="justify-content:center;gap:8px"><div class="btn" style="border-color:#fff;color:#fff">☎ Bellen</div><div class="btn" style="border-color:#fff;color:#fff">Offerte</div></div></div>
-</div>
-</sc-if>
-</div>
-<sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
-<div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">Kortste pagina van de drie, maar hij valt of staat bij goede projectfoto's: het mozaïek trekt de 5 nieuwste projecten uit de CPT en heeft dus consistent gesneden beelden nodig (vaste verhouding forceren bij upload).</div><div class="wpl">Dienstenlijst zonder iconen of foto's — snelst te vullen en te onderhouden door de klant.</div></div>
-</sc-if>
-</div>
-
-<div class="dv-opt" id="1d">
-<div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Diensten — overzichtspagina</div>
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Diensten — overzichtspagina</div>
 <div class="dv-card" style="width:1112px;padding:16px;display:flex;gap:18px;align-items:flex-start">
 <div class="wf" style="width:740px">
   <div class="sec" style="padding-top:10px;padding-bottom:10px"><div class="row" style="justify-content:space-between"><div class="img" style="width:44px;height:30px">logo</div><div class="row" style="gap:14px"><div class="t">Home</div><div class="t" style="color:#0f4d33">Diensten ▾</div><div class="t">Projecten</div><div class="t">Over ons</div><div class="btnf">Contact →</div></div></div></div>
@@ -285,10 +198,13 @@ a{color:#0f4d33}a:hover{color:#186e49}
 <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
 <div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">Deze pagina is het archief van de CPT "dienst" — de zes kaarten komen automatisch mee, dus een zevende dienst toevoegen betekent één bericht aanmaken, niet de pagina verbouwen.</div><div class="wpl">De submenu-items uit het menu (Gevelrenovatie … Complete woningrenovatie) verwijzen naar dezelfde items; menu één keer instellen met "Diensten" als parent.</div><div class="wpl">FAQ als eigen CPT of ACF-repeater, zodat dezelfde vragen ook op dienst-detail te tonen zijn (en meteen goed voor Google-rich results).</div></div>
 </sc-if>
+<sc-if value="{{ showActies }}" hint-placeholder-val="{{ true }}">
+<div class="kln" style="width:1112px"><div class="klt">Aanleveren door de klant</div><div class="kll">☐ Bevestig de zes diensten uit het menu — of geef door wat eraf of bij moet.</div><div class="kll">☐ Eén foto per dienst.</div><div class="kll">☐ 5 tot 8 veelgestelde vragen met antwoord.</div><div class="kll">☐ Klopt "één aanspreekpunt, één planning, één garantie" als belofte?</div></div>
+</sc-if>
 </div>
 
-<div class="dv-opt" id="1e">
-<div class="dv-olabel"><a class="dv-oid" href="#1e">1e</a>Dienst-detail — één template voor alle zes</div>
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Dienst-detail — één template voor alle zes</div>
 <div class="dv-card" style="width:1112px;padding:16px;display:flex;gap:18px;align-items:flex-start">
 <div class="wf" style="width:740px">
   <div class="sec" style="padding-top:10px;padding-bottom:10px"><div class="row" style="justify-content:space-between"><div class="img" style="width:44px;height:30px">logo</div><div class="row" style="gap:14px"><div class="t">Home</div><div class="t" style="color:#0f4d33">Diensten ▾</div><div class="t">Projecten</div><div class="t">Over ons</div><div class="btnf">Contact →</div></div></div></div>
@@ -327,10 +243,13 @@ a{color:#0f4d33}a:hover{color:#186e49}
 <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
 <div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">Eén single-template voor de CPT "dienst". Velden: intro, opsomming inbegrepen (repeater), voor/na-beeldpaar, stappen (repeater), FAQ-selectie, doelgroep-taxonomie.</div><div class="wpl">"Projecten met deze dienst" is een automatische query op de gedeelde taxonomie dienst — projecten koppelen gaat dan met één vinkje.</div><div class="wpl">Het formulier vult het veld "dienst" vooraf met de paginanaam, zodat aanvragen meteen gesorteerd binnenkomen.</div></div>
 </sc-if>
+<sc-if value="{{ showActies }}" hint-placeholder-val="{{ true }}">
+<div class="kln" style="width:1112px"><div class="klt">Aanleveren door de klant</div><div class="kll">☐ Per dienst: wat er inbegrepen is (6 punten) en de aanpak in 4 stappen.</div><div class="kll">☐ Per dienst een voor- en na-foto van hetzelfde project.</div><div class="kll">☐ Per dienst 2 of 3 vragen die klanten echt stellen.</div><div class="kll">☐ Naar wie mogen offerte-aanvragen per dienst toe?</div></div>
+</sc-if>
 </div>
 
-<div class="dv-opt" id="1f">
-<div class="dv-olabel"><a class="dv-oid" href="#1f">1f</a>Projecten — overzicht met filters</div>
+<div class="dv-opt" id="1d">
+<div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Projecten — overzicht met filters</div>
 <div class="dv-card" style="width:1112px;padding:16px;display:flex;gap:18px;align-items:flex-start">
 <div class="wf" style="width:740px">
   <div class="sec" style="padding-top:10px;padding-bottom:10px"><div class="row" style="justify-content:space-between"><div class="img" style="width:44px;height:30px">logo</div><div class="row" style="gap:14px"><div class="t">Home</div><div class="t">Diensten ▾</div><div class="t" style="color:#0f4d33">Projecten</div><div class="t">Over ons</div><div class="btnf">Contact →</div></div></div></div>
@@ -364,10 +283,13 @@ a{color:#0f4d33}a:hover{color:#186e49}
 <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
 <div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">CPT "project" met twee taxonomieën: dienst (gedeeld met de dienstenpagina's) en type opdrachtgever. Plaats en jaar als ACF-velden.</div><div class="wpl">Filters het beste als AJAX-filter (bijv. via de themabuilder of een filterplugin) — met 12 projecten is herladen van de pagina ook acceptabel, dan geen extra plugin nodig.</div></div>
 </sc-if>
+<sc-if value="{{ showActies }}" hint-placeholder-val="{{ true }}">
+<div class="kln" style="width:1112px"><div class="klt">Aanleveren door de klant</div><div class="kll">☐ Lijst van 6 tot 15 projecten met dienst, type opdrachtgever, plaats en jaar.</div><div class="kll">☐ Toestemming om de naam van de opdrachtgever te noemen — of een omschrijving zonder naam.</div><div class="kll">☐ Bepaal welke drie projecten uitgelicht worden op de home.</div></div>
+</sc-if>
 </div>
 
-<div class="dv-opt" id="1g">
-<div class="dv-olabel"><a class="dv-oid" href="#1g">1g</a>Project-detail — template</div>
+<div class="dv-opt" id="1e">
+<div class="dv-olabel"><a class="dv-oid" href="#1e">1e</a>Project-detail — template</div>
 <div class="dv-card" style="width:1112px;padding:16px;display:flex;gap:18px;align-items:flex-start">
 <div class="wf" style="width:740px">
   <div class="sec" style="padding-top:10px;padding-bottom:10px"><div class="row" style="justify-content:space-between"><div class="img" style="width:44px;height:30px">logo</div><div class="row" style="gap:14px"><div class="t">Home</div><div class="t">Diensten ▾</div><div class="t" style="color:#0f4d33">Projecten</div><div class="t">Over ons</div><div class="btnf">Contact →</div></div></div></div>
@@ -396,10 +318,13 @@ a{color:#0f4d33}a:hover{color:#186e49}
 <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
 <div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">Single-template voor de CPT "project". Velden: opdrachtgever, locatie, jaar, doorlooptijd, voor/na-paar, galerij, quote (optioneel, blok verdwijnt als het leeg is).</div><div class="wpl">Vraag de klant per project 6-10 bruikbare foto's aan te leveren, plus altijd één voor-foto. Zonder voor-foto's valt de sterkste sectie van deze pagina weg.</div></div>
 </sc-if>
+<sc-if value="{{ showActies }}" hint-placeholder-val="{{ true }}">
+<div class="kln" style="width:1112px"><div class="klt">Aanleveren door de klant</div><div class="kll">☐ Per project 6 tot 10 bruikbare foto's, met altijd minstens één voor-foto.</div><div class="kll">☐ Per project een korte omschrijving: opgave, aanpak, resultaat (± 150 woorden).</div><div class="kll">☐ Optioneel: een quote van de opdrachtgever met naam en functie.</div><div class="kll">☐ Doorlooptijd en jaar per project.</div></div>
+</sc-if>
 </div>
 
-<div class="dv-opt" id="1h">
-<div class="dv-olabel"><a class="dv-oid" href="#1h">1h</a>Over ons</div>
+<div class="dv-opt" id="1f">
+<div class="dv-olabel"><a class="dv-oid" href="#1f">1f</a>Over ons</div>
 <div class="dv-card" style="width:1112px;padding:16px;display:flex;gap:18px;align-items:flex-start">
 <div class="wf" style="width:740px">
   <div class="sec" style="padding-top:10px;padding-bottom:10px"><div class="row" style="justify-content:space-between"><div class="img" style="width:44px;height:30px">logo</div><div class="row" style="gap:14px"><div class="t">Home</div><div class="t">Diensten ▾</div><div class="t">Projecten</div><div class="t" style="color:#0f4d33">Over ons</div><div class="btnf">Contact →</div></div></div></div>
@@ -426,10 +351,13 @@ a{color:#0f4d33}a:hover{color:#186e49}
 <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
 <div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">Team als CPT of ACF-repeater; keurmerken en opdrachtgever-logo's als losse mediavelden zodat de klant ze zelf kan bijwerken.</div><div class="wpl">"Werken bij ons?" is nu alleen een knop naar contact — als er vacatures komen, wordt dit later een eigen pagina.</div></div>
 </sc-if>
+<sc-if value="{{ showActies }}" hint-placeholder-val="{{ true }}">
+<div class="kln" style="width:1112px"><div class="klt">Aanleveren door de klant</div><div class="kll">☐ Bedrijfsverhaal van 200 tot 300 woorden.</div><div class="kll">☐ Portretfoto's van het team met naam en functie.</div><div class="kll">☐ Certificaten (VCA, Bouwgarant) als PDF en de bijbehorende logo's.</div><div class="kll">☐ Logo's van opdrachtgevers die getoond mogen worden.</div></div>
+</sc-if>
 </div>
 
-<div class="dv-opt" id="1i">
-<div class="dv-olabel"><a class="dv-oid" href="#1i">1i</a>Contact</div>
+<div class="dv-opt" id="1g">
+<div class="dv-olabel"><a class="dv-oid" href="#1g">1g</a>Contact</div>
 <div class="dv-card" style="width:1112px;padding:16px;display:flex;gap:18px;align-items:flex-start">
 <div class="wf" style="width:740px">
   <div class="sec" style="padding-top:10px;padding-bottom:10px"><div class="row" style="justify-content:space-between"><div class="img" style="width:44px;height:30px">logo</div><div class="row" style="gap:14px"><div class="t">Home</div><div class="t">Diensten ▾</div><div class="t">Projecten</div><div class="t">Over ons</div><div class="btnf" style="background:#0f4d33">Contact →</div></div></div></div>
@@ -475,16 +403,21 @@ a{color:#0f4d33}a:hover{color:#186e49}
 <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
 <div class="wpn" style="width:1112px;box-sizing:border-box"><div class="wpt">WordPress</div><div class="wpl">Formulierplugin met twee keuzevelden (type klant, dienst) — die twee velden maken de aanvragen meteen sorteerbaar en zijn goud voor de opvolging.</div><div class="wpl">Zet spamfilter (honeypot of hCaptcha) en een kopie-naar-eigen-mailbox aan; kaart pas inladen na cookie-akkoord i.v.m. AVG.</div></div>
 </sc-if>
+<sc-if value="{{ showActies }}" hint-placeholder-val="{{ true }}">
+<div class="kln" style="width:1112px"><div class="klt">Aanleveren door de klant</div><div class="kll">☐ Definitieve adresgegevens, telefoonnummer, e-mailadres en openingstijden.</div><div class="kll">☐ KvK- en BTW-nummer voor de footer.</div><div class="kll">☐ Wie ontvangt de aanvragen, en is er een spoednummer buiten kantooruren?</div><div class="kll">☐ Privacyverklaring en algemene voorwaarden aanleveren.</div></div>
+</sc-if>
 </div>
+
 </div>
 </section>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showMobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Weergave&quot;},&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Weergave&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;showMobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Weergave&quot;},&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Weergave&quot;},&quot;showActies&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Weergave&quot;}}">
 class Component extends DCLogic {
   renderVals() {
     return {
       showMobile: this.props.showMobile ?? true,
       showNotes: this.props.showNotes ?? true,
+      showActies: this.props.showActies ?? true,
     };
   }
 }
